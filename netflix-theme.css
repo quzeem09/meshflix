@@ -1,0 +1,154 @@
+/* ==========================================================================
+   Meshflix — Netflix-inspired shared theme
+   Pure visual layer: no IDs/classes used by the JS files are redefined here
+   in a way that changes their structure — only colors, fonts, and effects.
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --nf-red: #e50914;
+  --nf-red-dark: #b0060f;
+  --nf-black: #000000;
+  --nf-bg: #141414;
+  --nf-surface: #181818;
+  --nf-surface-2: #232323;
+  --nf-border: rgba(255, 255, 255, 0.15);
+}
+
+body {
+  font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ---------------------------------------------------------------------- */
+/* Brand logo badge — reused on every page, purely decorative <img>/<a>    */
+/* ---------------------------------------------------------------------- */
+.nf-brand {
+  position: fixed;
+  top: 18px;
+  left: 24px;
+  z-index: 1030;
+  display: inline-block;
+  line-height: 0;
+}
+
+.nf-brand img {
+  height: 34px;
+  width: auto;
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.6));
+}
+
+.nf-brand-inline {
+  display: block;
+  margin: 0 auto 1.25rem;
+  height: 42px;
+  width: auto;
+}
+
+/* ---------------------------------------------------------------------- */
+/* Buttons                                                                 */
+/* ---------------------------------------------------------------------- */
+.btn-primary {
+  background-color: var(--nf-red) !important;
+  border-color: var(--nf-red) !important;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: var(--nf-red-dark) !important;
+  border-color: var(--nf-red-dark) !important;
+}
+
+.btn-outline-light:hover,
+.btn-outline-primary:hover {
+  background-color: var(--nf-red) !important;
+  border-color: var(--nf-red) !important;
+  color: #fff !important;
+}
+
+.btn-warning {
+  background-color: transparent !important;
+  border: 1px solid #ffffff !important;
+  color: #ffffff !important;
+}
+
+.btn-warning:hover {
+  background-color: var(--nf-red) !important;
+  border-color: var(--nf-red) !important;
+  color: #fff !important;
+}
+
+/* ---------------------------------------------------------------------- */
+/* Cards — movies, wishlist, previews, dashboard panels                   */
+/* ---------------------------------------------------------------------- */
+.card {
+  background-color: var(--nf-surface);
+  border: none;
+  border-radius: 6px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card.bg-secondary {
+  background-color: var(--nf-surface) !important;
+}
+
+.card-img-top {
+  border-radius: 6px 6px 0 0;
+}
+
+#movies-container .card:hover,
+#wishlist-container .card:hover,
+#preview-movies .card:hover {
+  transform: scale(1.045);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.7);
+  z-index: 2;
+}
+
+/* ---------------------------------------------------------------------- */
+/* Forms — login / signup / dashboard profile                             */
+/* ---------------------------------------------------------------------- */
+.form-control {
+  background-color: rgba(255, 255, 255, 0.08) !important;
+  border: 1px solid var(--nf-border) !important;
+  color: #fff !important;
+}
+
+.form-control:focus {
+  background-color: rgba(255, 255, 255, 0.12) !important;
+  border-color: var(--nf-red) !important;
+  box-shadow: 0 0 0 0.2rem rgba(229, 9, 20, 0.25) !important;
+  color: #fff !important;
+}
+
+.form-control::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* ---------------------------------------------------------------------- */
+/* Links & misc                                                           */
+/* ---------------------------------------------------------------------- */
+a {
+  color: var(--nf-red);
+}
+
+a:hover {
+  color: #ff4d54;
+}
+
+.spinner-border.text-light,
+.spinner-border.text-primary {
+  color: var(--nf-red) !important;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--nf-black);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--nf-surface-2);
+  border-radius: 5px;
+}

@@ -1,0 +1,54 @@
+body {
+  background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
+    url("./images/netflix-bg.png") no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+  font-family: "Poppins", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.card {
+  background-color: rgba(0, 0, 0, 0.85);
+  border-radius: 1rem;
+  border: none;
+}
+
+#profile-display {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #e50914;
+}
+
+input[type="file"],
+input[type="text"] {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.btn-custom {
+  background-color: #e50914;
+  border: none;
+}
+
+.btn-custom:hover {
+  background-color: #b0060f;
+}
+
+.logout-btn {
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
+  z-index: 1030;
+}
+
+h2,
+h4 {
+  font-weight: 700;
+  color: whitesmoke;
+}
